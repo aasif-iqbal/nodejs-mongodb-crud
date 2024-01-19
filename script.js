@@ -123,7 +123,6 @@ async function updateUser(){
         }
     );
     console.log('data:', data);
-
 }
 
 // Update user using Promise
