@@ -1,0 +1,64 @@
+[{
+  "_id": {
+    "$oid": "65a977048166c539556ff287"
+  },
+  "name": "jack",
+  "age": 22,
+  "department": "IT"
+},
+{
+  "_id": {
+    "$oid": "65a977f35587dc2f19ad6083"
+  },
+  "name": "jim",
+  "age": 21,
+  "department": "Maintances"
+},
+{
+  "_id": {
+    "$oid": "65a977f35587dc2f19ad6084"
+  },
+  "name": "joe",
+  "age": 22,
+  "department": "Building"
+},
+{
+  "_id": {
+    "$oid": "65a977f35587dc2f19ad6085"
+  },
+  "name": "Martin",
+  "age": 33,
+  "department": "Healthcare"
+},
+{
+  "_id": {
+    "$oid": "65a977f35587dc2f19ad6086"
+  },
+  "name": "Hulk",
+  "age": 54,
+  "department": "Mac"
+},
+{
+  "_id": {
+    "$oid": "65a977f35587dc2f19ad6087"
+  },
+  "name": "jack",
+  "age": 22,
+  "department": "IT"
+},
+{
+  "_id": {
+    "$oid": "65a977f35587dc2f19ad6088"
+  },
+  "name": "jack",
+  "age": 22,
+  "department": "IT"
+},
+{
+  "_id": {
+    "$oid": "65a977f35587dc2f19ad6089"
+  },
+  "name": "jack",
+  "age": 22,
+  "department": "IT"
+}]
