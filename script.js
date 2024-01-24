@@ -137,6 +137,7 @@ const updateUserPromise = databaseConn.collection(collectionName).updateOne(
     }
 );
 
+
 updateUserPromise.then((result)=>{
     console.log(result);
     /*
@@ -152,9 +153,49 @@ updateUserPromise.then((result)=>{
     console.log(error);
 });
 
+const updateManyPromise = databaseConn.collection(collectionName).updateMany({
+    age:{$gt:30}},
+    { $set:{ status: true} }
+);
+
+
+updateManyPromise.then((result)=>{
+    console.log(result);
+}).catch((err)=>{
+    console.log(err);
+})
+
 async function deleteUser(){
 
-}   
+    let databaseConn = client.db(databaseName);
+
+    let result = await databaseConn.collection(collectionName).deleteOne(
+        { name: 'Hulk'} );
+        
+        console.log(result);
+    }      
+
+async function deleteManyUsers(){
+
+    let databaseConn = client.db(databaseName);
+
+    let result = await databaseConn.collection(collectionName).deleteMany({
+         age: 22
+    });
+    
+    console.log(result);
+
+    /*
+    {
+        acknowledged: true,
+        modifiedCount: 0,
+        upsertedId: null,
+        upsertedCount: 0,
+        matchedCount: 1
+    }
+    { acknowledged: true, deletedCount: 6 }
+    */
+    }      
 
 async function run(){
    
@@ -164,10 +205,11 @@ async function run(){
     */
 
     await connectMongodb().catch(error);
-    await insertManyUsers().catch(error);
+    //  await insertManyUsers().catch(error);
     //  await findUser().catch(error);
     //  await updateUser().catch(error);
     //  await deleteUser().catch(error);
+    await deleteManyUsers().catch(error);
 }
 
 run();
